@@ -41,3 +41,6 @@
 	'((nil . (telephone-line-buffer-segment))
 	  (accent . (telephone-line-airline-position-segment))))
   (telephone-line-mode t))
+
+;; theme
+(set-face-attribute 'default nil :height 100) ; 10pt font
