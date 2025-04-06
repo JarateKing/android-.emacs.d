@@ -29,3 +29,15 @@
    (t
     (setq cursor-type 'bar))))
 (add-hook 'post-command-hook 'contextual-cursor)
+
+;; mode-line
+(use-package telephone-line
+  :ensure t
+  :config
+  (setq telephone-line-lhs
+	'((accent . (telephone-line-major-mode-segment))
+	  (nil . (telephone-line-minor-mode-segment))))
+  (setq telephone-line-rhs
+	'((nil . (telephone-line-buffer-segment))
+	  (accent . (telephone-line-airline-position-segment))))
+  (telephone-line-mode t))
