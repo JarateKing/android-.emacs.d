@@ -51,3 +51,6 @@
   (telephone-line-mode t))
 
 (set-face-attribute 'default nil :foreground "#ffffff" :background "#0b1118")
+
+;; autoload agenda
+(find-file "~/notes/agenda.org")
