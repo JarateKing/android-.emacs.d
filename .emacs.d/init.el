@@ -18,6 +18,14 @@
 (customize-set-variable 'tool-bar-position 'bottom)
 (customize-set-variable 'touch-screen-display-keyboard t)
 
+;; keybinds
+(cua-mode t)
+(setq cua-keep-region-after-copy t)
+(bind-key* "C-s" 'save-buffer)
+(bind-key* "C-f" 'isearch-forward)
+(bind-key* "C-y" 'undo-redo)
+(bind-key* "C-a" 'mark-whole-buffer)
+
 ;; cursor
 (defun contextual-cursor ()
   "Set cursor based on minor mode context"
@@ -42,5 +50,4 @@
 	  (accent . (telephone-line-airline-position-segment))))
   (telephone-line-mode t))
 
-;; theme
-(set-face-attribute 'default nil :height 100) ; 10pt font
+(set-face-attribute 'default nil :foreground "#ffffff" :background "#0b1118")
