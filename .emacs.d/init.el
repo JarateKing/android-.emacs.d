@@ -18,6 +18,9 @@
 (customize-set-variable 'tool-bar-position 'bottom)
 (customize-set-variable 'touch-screen-display-keyboard t)
 
+;; text settings
+(global-visual-line-mode t)
+
 ;; keybinds
 (cua-mode t)
 (setq cua-keep-region-after-copy t)
