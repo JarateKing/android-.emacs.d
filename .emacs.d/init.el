@@ -64,3 +64,8 @@
 
 ;; autoload agenda
 (find-file "~/notes/agenda.org")
+
+;; quick load init.el
+(defun loadinitel ()
+  (interactive)
+  (find-file "~/.emacs.d/init.el"))
