@@ -53,7 +53,14 @@
 	  (accent . (telephone-line-airline-position-segment))))
   (telephone-line-mode t))
 
+;; theme
 (set-face-attribute 'default nil :foreground "#ffffff" :background "#0b1118")
+
+;; autosave
+(defun save-all ()
+  (interactive)
+  (save-some-buffers t))
+(add-hook 'focus-out-hook 'save-all)
 
 ;; autoload agenda
 (find-file "~/notes/agenda.org")
